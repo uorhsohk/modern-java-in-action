@@ -13,6 +13,9 @@ public class AppleExample {
         inventory.add(new Apple(GREEN, 90));
 
         System.out.println(filterApplesBasedOn(inventory, new AppleGreenColorPredicate()));
+        prettyPrintApple(inventory, new PrettyPrintWeight());
+        prettyPrintApple(inventory, new PrettyPrintColor());
+
     }
 
     public static List<Apple> filterApplesBasedOn(List<Apple> inventory, ApplePredicate predicate) {
@@ -23,5 +26,14 @@ public class AppleExample {
             }
         }
         return result;
+    }
+
+    public static void prettyPrintApple(List<Apple> inventory, PrettyPrintPredicate predicate) {
+        StringBuilder builder = new StringBuilder();
+        for (Apple apple : inventory) {
+            builder.append(predicate.printWeight(apple));
+            builder.append("\n");
+        }
+        System.out.println(builder);
     }
 }
