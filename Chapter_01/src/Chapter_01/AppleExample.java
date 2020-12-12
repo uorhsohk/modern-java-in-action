@@ -37,6 +37,7 @@ public class AppleExample {
                 .collect(toList());
         System.out.println(heavyApplesUsingParallelProcessing);
 
+
     }
 
     public static List<Apple> filterApples(List<Apple> apples, Predicate<Apple> predicate) {
