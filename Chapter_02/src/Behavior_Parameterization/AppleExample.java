@@ -31,7 +31,7 @@ public class AppleExample {
     public static void prettyPrintApple(List<Apple> inventory, PrettyPrintPredicate predicate) {
         StringBuilder builder = new StringBuilder();
         for (Apple apple : inventory) {
-            builder.append(predicate.printWeight(apple));
+            builder.append(predicate.printBasedOnProperty(apple));
             builder.append("\n");
         }
         System.out.println(builder);
