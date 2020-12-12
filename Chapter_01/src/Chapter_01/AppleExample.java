@@ -3,10 +3,10 @@ package Chapter_01;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
-import static Chapter_01.COLOR.*;
-import static java.util.stream.Collectors.*;
+import static Chapter_01.COLOR.GREEN;
+import static Chapter_01.COLOR.RED;
+import static java.util.stream.Collectors.toList;
 
 public class AppleExample {
     public static void main(String[] args) {
