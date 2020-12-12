@@ -14,8 +14,14 @@ public class AppleExample {
         apples.add(new Apple(GREEN, 25));
 
         System.out.println(filterGreenApples(apples));
+
+        // using method reference
         System.out.println(filterApples(apples,Apple::isGreenApple));
         System.out.println(filterApples(apples, Apple::isHeavyApple));
+
+        // using lambda
+        System.out.println(filterApples(apples, (Apple a) -> GREEN.equals(a.getColor())));
+        System.out.println(filterApples(apples, (Apple a) -> a.getWeight() > 100));
 
     }
 
