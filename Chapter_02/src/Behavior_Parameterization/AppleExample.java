@@ -16,6 +16,9 @@ public class AppleExample {
         prettyPrintApple(inventory, new PrettyPrintWeight());
         prettyPrintApple(inventory, new PrettyPrintColor());
 
+        // using lambdas
+        System.out.println(filterApplesBasedOn(inventory, (Apple a) -> a.getColor().equals(RED)));
+
     }
 
     public static List<Apple> filterApplesBasedOn(List<Apple> inventory, ApplePredicate predicate) {
